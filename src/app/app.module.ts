@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 
 import { AppComponent } from './app.component';
@@ -13,6 +15,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserItemComponent } from './user-item/user-item.component';
 
+
+import { appRoutes } from '../routes';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,9 @@ import { UserItemComponent } from './user-item/user-item.component';
     UserItemComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

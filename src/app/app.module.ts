@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
@@ -41,9 +40,9 @@ import { environment } from '../environments/environment';
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
-    AngularFireAuthModule,
-    AngularFireDatabaseModule,
     AngularFireModule,
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebase),
   ],
   providers: [AuthService, ChatService],
